@@ -1,6 +1,5 @@
 #include <sourcemod>
 #include <sdktools>
-#include <sdktools>
 #include <sdkhooks>
 #include <cstrike>
 
