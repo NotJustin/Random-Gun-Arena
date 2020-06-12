@@ -1,0 +1,290 @@
+"Weapons"
+{
+	"Melee"
+	{
+		"Knife"
+		{
+			"id"		"weapon_knife"
+			"weight"	"0.33"
+			"sound"		"rga/knife.mp3"
+			"armor"		"1"
+		}
+		"weight_override"	"-1.0"
+		"armor_override"	"-1"
+	}
+	"Pistols"
+	{
+		"Zeus_x27"
+		{
+			"id"		"weapon_taser"
+			"weight"	"0.33"
+			"sound"		"rga/taser.mp3"
+			"armor"		"1"
+		}
+		"CZ75A"
+		{
+			"id"		"weapon_cz75a"
+			"weight"	"1.0"
+			"sound"		"rga/cz75a.mp3"
+			"armor"		"2"
+		}
+		"Deagle"
+		{
+			"id"		"weapon_deagle"
+			"weight"	"1.0"
+			"sound"		"rga/deagle.mp3"
+			"armor"		"2"
+		}
+		"Dual_Berettas"
+		{
+			"id"		"weapon_elite"
+			"weight"	"1.0"
+			"sound"		"rga/dualies.mp3"
+			"armor"		"2"
+		}
+		"Five-SeveN"
+		{
+			"id"		"weapon_fiveseven"
+			"weight"	"1.0"
+			"sound"		"rga/fiveseven.mp3"
+			"armor"		"2"
+		}
+		"Glock-18"
+		{
+			"id"		"weapon_glock"
+			"weight"	"1.0"
+			"sound"		"rga/glock.mp3"
+			"armor"		"1"
+		}
+		"P2000"
+		{
+			"id"		"weapon_hkp2000"
+			"weight"	"1.0"
+			"sound"		"rga/p2000.mp3"
+			"armor"		"1"
+		}
+		"P250"
+		{
+			"id"		"weapon_p250"
+			"weight"	"1.0"
+			"sound"		"rga/p250.mp3"
+			"armor"		"2"
+		}
+		"R8_Revolver"
+		{
+			"id"		"weapon_revolver"
+			"weight"	"1.0"
+			"sound"		"rga/revolver.mp3"
+			"armor"		"2"
+		}
+		"Tec-9"
+		{
+			"id"		"weapon_tec9"
+			"weight"	"1.0"
+			"sound"		"rga/tec9.mp3"
+			"armor"		"2"
+		}
+		"USP-S"
+		{
+			"id"		"weapon_usp_silencer"
+			"weight"	"1.0"
+			"sound"		"rga/usp.mp3"
+			"armor"		"1"
+		}
+		"weight_override"	"-1.0"
+		"armor_override"	"-1"
+	}
+	"Shotguns"
+	{
+		"MAG-7"
+		{
+			"id"		"weapon_mag7"
+			"weight"	"1.0"
+			"sound"		"rga/mag7.mp3"
+			"armor"		"2"
+		}
+		"Nova"
+		{
+			"id"		"weapon_nova"
+			"weight"	"1.0"
+			"sound"		"rga/nova.mp3"
+			"armor"		"2"
+		}
+		"Sawed-Off"
+		{
+			"id"		"weapon_sawedoff"
+			"weight"	"1.0"
+			"sound"		"rga/sawedoff.mp3"
+			"armor"		"2"
+		}
+		"XM1014"
+		{
+			"id"		"weapon_xm1014"
+			"weight"	"1.0"
+			"sound"		"rga/auto_shotty.mp3"
+			"armor"		"2"
+		}
+		"weight_override"	"-1.0"
+		"armor_override"	"-1"
+	}
+	"Machine_Guns"
+	{
+		"M249"
+		{
+			"id"		"weapon_m249"
+			"weight"	"1.0"
+			"sound"		"rga/m249.mp3"
+			"armor"		"2"
+		}
+		"Negev"
+		{
+			"id"		"weapon_negev"
+			"weight"	"1.0"
+			"sound"		"rga/negev.mp3"
+			"armor"		"2"
+		}
+		"weight_override"	"-1.0"
+		"armor_override"	"-1"
+	}
+	"Submachine_Guns"
+	{
+		"MAC-10"
+		{
+			"id"		"weapon_mac10"
+			"weight"	"1.0"
+			"sound"		"rga/mac10.mp3"
+			"armor"		"2"
+		}
+		"MP5-SD"
+		{
+			"id"		"weapon_mp5sd"
+			"weight"	"1.0"
+			"sound"		"rga/mp5.mp3"
+			"armor"		"2"
+		}
+		"MP7"
+		{
+			"id"		"weapon_mp7"
+			"weight"	"1.0"
+			"sound"		"rga/mp7.mp3"
+			"armor"		"2"
+		}
+		"MP9"
+		{
+			"id"		"weapon_mp9"
+			"weight"	"1.0"
+			"sound"		"rga/mp9.mp3"
+			"armor"		"2"
+		}
+		"P90"
+		{
+			"id"		"weapon_p90"
+			"weight"	"1.0"
+			"sound"		"rga/p90.mp3"
+			"armor"		"2"
+		}
+		"PP-Bizon"
+		{
+			"id"		"weapon_bizon"
+			"weight"	"1.0"
+			"sound"		"rga/ppbizon.mp3"
+			"armor"		"2"
+		}
+		"UMP-45"
+		{
+			"id"		"weapon_ump45"
+			"weight"	"1.0"
+			"sound"		"rga/ump.mp3"
+			"armor"		"2"
+		}
+		"weight_override"	"-1.0"
+		"armor_override"	"-1"
+	}
+	"Assault_Rifles"
+	{
+		"AK-47"
+		{
+			"id"		"weapon_ak47"
+			"weight"	"2.0"
+			"sound"		"rga/ak47.mp3"
+			"armor"		"2"
+		}
+		"AUG"
+		{
+			"id"		"weapon_aug"
+			"weight"	"1.0"
+			"sound"		"rga/aug.mp3"
+			"armor"		"2"
+		}
+		"FAMAS"
+		{
+			"id"		"weapon_famas"
+			"weight"	"1.0"
+			"sound"		"rga/famas.mp3"
+			"armor"		"2"
+		}
+		"Galil_AR"
+		{
+			"id"		"weapon_galilar"
+			"weight"	"1.0"
+			"sound"		"rga/galil.mp3"
+			"armor"		"2"
+		}
+		"M4A1-S"
+		{
+			"id"		"weapon_m4a1_silencer"
+			"weight"	"2.0"
+			"sound"		"rga/m4a1s.mp3"
+			"armor"		"2"
+		}
+		"M4A4"
+		{
+			"id"		"weapon_m4a1"
+			"weight"	"2.0"
+			"sound"		"rga/m4a1.mp3"
+			"armor"		"2"
+		}
+		"SG_553"
+		{
+			"id"		"weapon_sg556"
+			"weight"	"1.0"
+			"sound"		"rga/sg553.mp3"
+			"armor"		"2"
+		}
+		"weight_override"	"-1.0"
+		"armor_override"	"-1"
+	}
+	"Sniper_Rifles"
+	{
+		"AWP"
+		{
+			"id"		"weapon_awp"
+			"weight"	"1.0"
+			"sound"		"rga/awp.mp3"
+			"armor"		"2"
+		}
+		"G3SG1"
+		{
+			"id"		"weapon_g3sg1"
+			"weight"	"1.0"
+			"sound"		"rga/t_autosniper.mp3"
+			"armor"		"2"
+		}
+		"SCAR-20"
+		{
+			"id"		"weapon_scar20"
+			"weight"	"1.0"
+			"sound"		"rga/ct_autosniper.mp3"
+			"armor"		"2"
+		}
+		"SSG_08"
+		{
+			"id"		"weapon_ssg08"
+			"weight"	"1.0"
+			"sound"		"rga/scout.mp3"
+			"armor"		"2"
+		}
+		"weight_override"	"-1.0"
+		"armor_override"	"-1"
+	}
+}
