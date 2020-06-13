@@ -3,6 +3,29 @@
  At the end of a round, a random gun is chosen, to be given to all players at the start of the following round.<br>
  When a player kills another player, they receive full health and armor(depending on if there is armor for the current weapon).<br>
 
+### ConVars
+
+```
+rga_removetype (int | min 0 max 2 default 2)
+"0 = Do not remove any weapons from pool. 1 = sab_removepreviousweapons. 2 = sab_removepreviousgroups. You cannot do both"
+
+rga_removepreviousweapons (int | default 0)
+"Max is 36. Number of weapons that must pass before most recent weapon can be repeated. You can write 'all' instead of 36"
+
+rga_removepreviousgroups (int | default 1)
+"Max is 7. Number of groups that must pass before most recent group can be repeated. You can write 'all' instead of 7."
+
+rga_printdamagemessages (bool | default 1)
+"When a client dies or survives to end of round, print the damage they dealt, received, and healed to chat"
+```
+
+### Installation
+
+gameserver goes on your csgo server. move the addons and sound folders into your csgo folder.
+fastdl goes on your web server.
+
+### Configuration
+
 In addons/sourcemod/configs/rga/weapons.txt you can edit a lot of things.
 
 1. Edit the "weight" of the gun, which is how likely it is to be selected randomly.
@@ -14,6 +37,5 @@ In addons/sourcemod/configs/rga/weapons.txt you can edit a lot of things.
 
 Currently, the plugin forces all weapons to be used at least once before you can see another weapon used again. This makes weights kind of pointless. See plans ->
 
-Plans:
-1. Add option to remove "N" previous weapons (includes ALL).
-2. Add option to remove "N" previous weapon-groups (includes ALL).
+### Bugs
+Sound isn't working for me. I have no clue why.
