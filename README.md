@@ -3,11 +3,21 @@
  At the end of a round, a random gun is chosen, to be given to all players at the start of the following round.<br>
  When a player kills another player, they receive full health and armor(depending on if there is armor for the current weapon).<br>
 
+https://www.youtube.com/watch?v=1aTuJrlZKjA
+
+### Changelog
+
+```
+1.0.1 - 
+Fixed sounds not working.
+Added hint text and ConVar to play sound when hint text stops changing. (See video above)
+```
+
 ### ConVars
 
 ```
 rga_removetype (int | min 0 max 2 default 2)
-"0 = Do not remove any weapons from pool. 1 =  rga_removepreviousweapons. 2 = rga_removepreviousgroups. You cannot do both"
+"0 = Do not remove any weapons from pool. 1 = rga_removepreviousweapons. 2 = rga_removepreviousgroups. You cannot do both"
 
 rga_removepreviousweapons (int | default 0)
 "Max is 36. Number of weapons that must pass before most recent weapon can be repeated. You can write 'all' instead of 36"
@@ -17,6 +27,9 @@ rga_removepreviousgroups (int | default 1)
 
 rga_printdamagemessages (bool | default 1)
 "When a client dies or survives to end of round, print the damage they dealt, received, and healed to chat"
+
+rga_playnextweaponsound (bool | default 1)
+"When the next weapon is chosen, a voice will read the name of the weapon" 
 ```
 
 ### Installation
@@ -36,4 +49,4 @@ In addons/sourcemod/configs/rga/weapons.txt you can edit a lot of things.
 6. Remove guns from being used, by just removing their entry from weapons.txt
 
 ### Bugs
-Sound isn't working for me. I have no clue why.
+none atm
