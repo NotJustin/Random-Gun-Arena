@@ -9,7 +9,7 @@
 public Plugin myinfo = 
 {
 	name = "randomgunarena", 
-	author = "Justin", 
+	author = "Justin (ff), inspired by The Doggy", 
 	description = "Everyone has same random gun on spawn", 
 	version = "1.0.0",
 	url = "https://www.steamcommunity.com/id/namenotjustin"
