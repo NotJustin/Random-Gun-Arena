@@ -7,7 +7,7 @@
 
 ```
 rga_removetype (int | min 0 max 2 default 2)
-"0 = Do not remove any weapons from pool. 1 = sab_removepreviousweapons. 2 = sab_removepreviousgroups. You cannot do both"
+"0 = Do not remove any weapons from pool. 1 =  rga_removepreviousweapons. 2 = rga_removepreviousgroups. You cannot do both"
 
 rga_removepreviousweapons (int | default 0)
 "Max is 36. Number of weapons that must pass before most recent weapon can be repeated. You can write 'all' instead of 36"
