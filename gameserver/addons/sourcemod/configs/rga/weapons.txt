@@ -9,11 +9,6 @@
 			"sound"		"rga/knife.mp3"
 			"armor"		"1"
 		}
-		"weight_override"	"-1.0"
-		"armor_override"	"-1"
-	}
-	"Pistols"
-	{
 		"Zeus_x27"
 		{
 			"id"		"weapon_taser"
@@ -21,6 +16,11 @@
 			"sound"		"rga/taser.mp3"
 			"armor"		"1"
 		}
+		"weight_override"	"-1.0"
+		"armor_override"	"-1"
+	}
+	"Pistols"
+	{
 		"CZ75A"
 		{
 			"id"		"weapon_cz75a"
