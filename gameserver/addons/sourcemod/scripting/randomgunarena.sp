@@ -57,7 +57,8 @@ ConVar
 	cvar_RemoveType,
 	cvar_RemovePreviousWeapons,
 	cvar_RemovePreviousGroups,
-	cvar_PrintDamageMessages
+	cvar_PrintDamageMessages,
+	cvar_PlayNextWeaponSound
 ;
 
 public void OnPluginStart()
@@ -77,6 +78,7 @@ public void OnPluginStart()
 	cvar_RemovePreviousWeapons = CreateConVar("rga_removepreviousweapons", "0", "Max is 36. Number of weapons that must pass before most recent weapon can be repeated. You can write 'all' instead of 36");
 	cvar_RemovePreviousGroups = CreateConVar("rga_removepreviousgroups", "1", "Max is 7. Number of groups that must pass before most recent group can be repeated. You can write 'all' instead of 7.");
 	cvar_PrintDamageMessages = CreateConVar("rga_printdamagemessages", "1", "When a client dies, or, when survives to end of round, print the damage they dealt, received, and healed to chat");
+	cvar_PlayNextWeaponSound = CreateConVar("rga_playnextweaponsound", "1", "When the next weapon is chosen, a voice will read the name of the weapon", _, true, 0.0, true, 1.0);
 
 	AddCommandListener(CommandList_Drop, "drop");
 
@@ -176,22 +178,28 @@ void SetArmor(int client)
 
 void BrowseWeapon(KeyValues weapons, char group[64], float weightOverride, int armorOverride)
 {
+	Weapon weapon;
+
 	char id[64];
 	weapons.GetString("id", id, sizeof(id));
+	weapon.id = id;
 
 	char name[64];
 	weapons.GetSectionName(name, sizeof(name));
+	weapon.name = name;
+
+	weapon.group = group;
 
 	char soundPath[PLATFORM_MAX_PATH];
 	char bufferString[PLATFORM_MAX_PATH];
 	weapons.GetString("sound", soundPath, sizeof(soundPath), "rga/ak47.mp3");
-
-	if (!strcmp(soundPath, "", false))
+	weapon.soundPath = soundPath;
+	if (strcmp(soundPath, "", false))
 	{
 		Format(bufferString, sizeof(bufferString), "sound/%s", soundPath);
 		AddFileToDownloadsTable(bufferString);
-		Format(soundPath, sizeof(soundPath), "%s", soundPath);
 		AddToStringTable(FindStringTable("soundprecache"), soundPath);
+		Format(soundPath, sizeof(soundPath), "*/%s", soundPath);
 	}
 
 	float weight = weapons.GetFloat("weight");
@@ -199,20 +207,15 @@ void BrowseWeapon(KeyValues weapons, char group[64], float weightOverride, int a
 	{
 		weight = weightOverride;
 	}
+	weapon.weight = weight;
 
 	int armor = weapons.GetNum("armor");
 	if (armorOverride != -1)
 	{
 		armor = armorOverride;
 	}
-
-	Weapon weapon;
-	weapon.id = id;
-	weapon.name = name;
-	weapon.group = group;
-	weapon.soundPath = soundPath;
-	weapon.weight = weight;
 	weapon.armor = armor;
+
 	g_Weapons.PushArray(weapon);
 	g_Available.Push(g_WeaponCount++);
 }
@@ -451,24 +454,15 @@ void PickRandomWeapon()
 			break;
 		}
 	}
-	Weapon weaponTest;
-	for (int i = 0; i < g_Used.Length; ++i)
-	{
-		g_Weapons.GetArray(g_Used.Get(i), weaponTest, sizeof(weaponTest));
-		PrintToChatAll(weaponTest.name);
-	}
-	EmitSoundToAll(g_Weapon.soundPath);
 	ShowNextWeaponToAll();
 }
 
 void ShowNextWeaponToAll()
 {
-	//SetHudTextParams(-1.0, 0.30, cvar_RoundRestartDelay.FloatValue, 255, 255, 0, 255, 1, 0.0, 0.0, 0.0);
 	for (int i = 1; i < MaxClients; ++i)
 	{
 		if (IsClientInGame(i) && !IsFakeClient(i))
 		{
-			//ShowHudText(i, -1, "Next Weapon: %s", g_Weapon.name);
 			CreateTimer(0.1, Timer_ShowWeaponHintToClient, GetClientUserId(i), TIMER_REPEAT);
 		}
 	}
@@ -484,6 +478,10 @@ Action Timer_ShowWeaponHintToClient(Handle timer, int userId)
 		{
 			g_iClientNumPrinted[client] = 0.0;
 			Format(str, sizeof(str), "The next weapon is:\n%s", g_Weapon.name);
+			if (cvar_PlayNextWeaponSound.BoolValue)
+			{
+				EmitSoundToClient(client, g_Weapon.soundPath);
+			}
 			PrintHintText(client, str);
 			return Plugin_Stop;
 		}
