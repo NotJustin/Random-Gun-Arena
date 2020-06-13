@@ -21,7 +21,7 @@ rga_printdamagemessages (bool | default 1)
 
 ### Installation
 
-gameserver goes on your csgo server. move the addons and sound folders into your csgo folder.
+gameserver goes on your csgo server. move the addons and sound folders into your csgo folder.<br>
 fastdl goes on your web server.
 
 ### Configuration
@@ -34,8 +34,6 @@ In addons/sourcemod/configs/rga/weapons.txt you can edit a lot of things.
 4. Override the weights of all of the weapons in the weapon group and set them to the override value. "-1.0" means do not override.
 5. Override the armor that will be given to players in the weapon group and set them to the override value. "-1" means do not override.
 6. Remove guns from being used, by just removing their entry from weapons.txt
-
-Currently, the plugin forces all weapons to be used at least once before you can see another weapon used again. This makes weights kind of pointless. See plans ->
 
 ### Bugs
 Sound isn't working for me. I have no clue why.
