@@ -1,5 +1,5 @@
 # Random Gun Arena
- A variant of Gun Game. Inspired by this thread: https://forums.alliedmods.net/showthread.php?t=313378 and thanks to CliptonHeist<br>
+ A variant of Gun Game. Inspired by this thread: https://forums.alliedmods.net/showthread.php?t=313378 and thanks to CliptonHeist (The Doggy) for the original plugin and inspiration<br>
  At the end of a round, a random gun is chosen, to be given to all players at the start of the following round.<br>
  When a player kills another player, they receive full health and armor(depending on if there is armor for the current weapon).<br>
 
